@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Задание 3</title>
+    
+    <script>
+      function zad1() {
+        var a = parseInt(document.getElementById('a').value);
+        var v = a*a*a;
+        document.getElementById('result').innerHTML = "V=" + v;
+      }
+      
+      function zad11() {
+         var a = parseInt(document.getElementById('a').value);
+        var s = a*a*6;
+        document.getElementById('result1').innerHTML = "S=" + s;
+      }
+      
+      function zad2() {
+        var R = parseInt(document.getElementById('R').value);
+        var r = parseInt(document.getElementById('r').value);
+        var s1 = Math.PI * (R*R - r*r);
+        document.getElementById('result2').innerHTML = "S=" + s1;
+      }
+      
+            
+      function zad3() {
+        var a = parseInt(document.getElementById('a1').value);
+        var b = parseInt(document.getElementById('b').value);
+        var h = parseInt(document.getElementById('h').value);
+        var s2 = 0.5*(a+b)*h;
+        document.getElementById('result3').innerHTML = "S=" + s2;
+      }
+      
+    </script>
+  </head>
+  
+  <body>
+    <h1>НА ТРОЙКУ</h1>
+    <p>Введите сторону куба</p>
+    <input type="text" id="a"><br>
+      <input type="button" value="Площадь боковых поверхностей" onclick="zad1()"><br>
+      <div id="result"></div>
+
+      <input type="button" value="Объем куба" onclick="zad11()"><br>
+      <div id="result1"></div><br>
+    
+    <h1>НА ЧЕТВЕРКУ</h1>
+    <p>Радиус внешней окружности</p>
+    <input type="text" id="R"><br>
+    <p>Радиус внутренней окружности</p>
+    <input type="text" id="r"><br>
+      <input type="button" value="Площадь кольца по вводимым радиусам" onclick="zad2()"><br>
+      <div id="result2"></div><br>
+    
+    <h1>НА ПЯТЕРКУ</h1>
+    <p>Введите длины оснований</p>
+    <input type="text" id="a1"><br>
+    <input type="text" id="b"><br>
+    <p>Введите высоту</p>
+    <input type="text" id="h"><br>
+      <input type="button" value="Площадь трапеции" onclick="zad3()"><br>
+      <div id="result3"></div><br>
+  </body>
+</html>
