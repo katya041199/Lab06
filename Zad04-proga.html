@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Задание 4</title>
+   
+    <script>
+/*НА ТРОЙКУ*/
+      function rost() {
+        var mom = parseInt(document.getElementById('mom').value);
+        var dad = parseInt(document.getElementById('dad').value);
+        var sred = (mom+dad)/2;
+        var dev = sred - 6.4;
+        var boy = sred + 6.4;
+        document.getElementById('r_girl').innerHTML = "Девочка: " + dev;
+        document.getElementById('r_boy').innerHTML = "Мальчик: " + boy;
+      }
+
+/*НА ЧЕТВЕРКУ*/
+      function voz_w() { /*Возраст женщины*/
+        var voz_m = parseInt(document.getElementById('vozrast_m').value);
+        var woman = voz_m / 2 + 7;
+        document.getElementById('v_girl').innerHTML = "Идеальный возраст женщины " + woman;
+      }
+
+      function voz_m() { /*Возраст мужчины*/
+        var voz_w = parseInt(document.getElementById('vozrast_w').value);
+        var man = 2 * voz_w - 17;
+        document.getElementById('v_boy').innerHTML = "Идеальный возраст мужчины " + man;
+      }
+
+
+/*НА ПЯТЕРКУ*/
+      function vremya() {
+        var sec = parseInt(document.getElementById('sec').value);
+        h = Math.round(sec / 3600) ;/*Часы*/
+        m = Math.round((sec % 3600) / 60);/*Минуты*/
+        s = Math.round((sec % 3600 % 60));/*Секунды*/
+        document.getElementById('vrem').innerHTML = 'Это ' + h + ' часов ' + m + ' минут ' + s + ' секунд' ;
+      }
+    </script>
+  </head>
+  
+  
+  <body>
+    <h1>НА ТРОЙКУ</h1>
+    <p>Введите рост мамы</p>
+    <input type="text" id="mom">
+    <p>Введите рост папы</p>
+    <input type="text" id="dad"><br>
+    <input type="button" value="Рассчитать рост ребенка" onclick="rost();">
+    <div id="r_girl"></div>
+    <div id="r_boy"></div>
+    
+
+    <h1>НА ЧЕТВЕРКУ</h1>
+    <p>Введите возраст мужчины </p>
+    <input type="text" id="vozrast_m"><br>
+    <input type="button" value="Рассчитать" onclick="voz_w();">
+    <div id="v_girl"></div>
+
+    <p>Введите возраст женщины </p>
+    <input type="text" id="vozrast_w"><br>
+    <input type="button" value="Рассчитать" onclick="voz_m();">
+    <div id="v_boy"></div>
+    
+
+    <h1>НА ПЯТЕРКУ</h1>
+    <p>Введите количество секунд</p>
+    <input type="text" id="sec"><br>
+    <input type="button" value="Рассчитать" onclick="vremya();">
+    <div id="vrem"></div>
+    
+  </body>
+</html>
